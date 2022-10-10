@@ -5,12 +5,12 @@
 
 
 @Test
-Scenario: Verify user is able to update his/her first and last name details
+Scenario: verify user is able to update his/her first and last name details
 	Given a valid user logs into the application
-	Given user navigates to the Profile tab
+	Given user navigates to the profile tab
 	Given clicks on their name
-	When user updates existing values of First Name and Last Name field
-	When clicks Save button
+	When user updates existing values of first name and last name field
+	When clicks save button
 	Then first and last name details are updated
 
 @Test
@@ -18,13 +18,13 @@ Scenario Outline: Verify user is able to update his/her availability details
 	Given a valid user logs into the application
 	Given user navigates to the Profile tab
 	When clicks on the pencil icon next to Availability field
-	When user selects '<availability type>'
+	When user selects availability '<availability type>'
 	Then availability field is updated
 
-	Examples:
+Examples:
 	| availability type |
-	| "Part time"	    |
-	| "Full time"       |
+	| Part time         |
+	| Full time         |
 
 @Test
 Scenario Outline: Verify user is able to update his/her Hours details
@@ -34,11 +34,11 @@ Scenario Outline: Verify user is able to update his/her Hours details
 	When user selects '<hours type>'
 	Then Hours field is updated
 
-	Examples:
-	| hours type				 |
-	| "Less than 30hours a week" |
-	| "More than 30hours a week" |
-	| "As needed"				 |
+Examples:
+	| hours type               |
+	| Less than 30hours a week |
+	| More than 30hours a week |
+	| As needed                |
 
 @Test
 Scenario Outline: Verify user is able to update his/her Earn Target details
@@ -48,11 +48,11 @@ Scenario Outline: Verify user is able to update his/her Earn Target details
 	When user selects '<earn target type>'
 	Then Earn Target field is updated
 
-	Examples:
-	| earn target type					 |
-	| "Less than $500 per month"		 |
-	| "Between $500 and $1000 per month" |
-	| "More than $1000 per month"		 |
+Examples:
+	| earn target type                 |
+	| Less than $500 per month         |
+	| Between $500 and $1000 per month |
+	| More than $1000 per month        |
 
 @Test
 Scenario: Verify user is able to add/update his/her Description details
@@ -72,12 +72,12 @@ Scenario Outline: Verify user is able to add Languages details
 	When clicks Save button
 	Then Language details are saved
 
-	Examples:
-	| language  | language level     |
-	| "English" | "Basic"            |
-	| "Hindi"   | "Conversational"   |
-	| "Chinese" | "Fluent"           |
-	| "Latin"   | "Native/Bilingual" |
+Examples:
+	| language | language level   |
+	| English  | Basic            |
+	| Hindi    | Conversational   |
+	| Chinese  | Fluent           |
+	| Latin    | Native/Bilingual |
 
 	
 @Test
@@ -89,11 +89,11 @@ Scenario Outline: Verify user is able to add skills details
 	When clicks Save button
 	Then Language details are saved
 
-	Examples:
-	| skill				   | skill level    |
-	| "Functional Testing" | "Beginner"     |
-	| "Automation Testing" | "Intermeditae" |
-	| "Selenium"		   | "Expert"       |
+Examples:
+	| skill              | skill level  |
+	| Functional Testing | Beginner     |
+	| Automation Testing | Intermediate |
+	| Selenium           | Expert       |
 
 @Test
 Scenario Outline: Verify user is able to add Education details
@@ -104,10 +104,10 @@ Scenario Outline: Verify user is able to add Education details
 	When clicks Save button
 	Then Education details are saved
 
-	Examples:
-	| College/University Name | Country        | Title    | Degree			  | Year of graduation |
-	| "Auckland Univeristy"   | "New Zealand"  | "B.Tech" | "Graduation"	  | "2011"             |
-	| "Victoria Univeristy"   | "New Zealand"  | "M.Tech" | "Post Graduation" | "2015"             |
+Examples:
+	| College/University Name | Country     | Title  | Degree          | Year of graduation |
+	| Auckland Univeristy     | New Zealand | B.Tech | Graduation      | 2011               |
+	| Victoria Univeristy     | New Zealand | M.Tech | Post Graduation | 2015               |
 
 @Test
 Scenario Outline: Verify user is able to add Certifications details
@@ -118,7 +118,7 @@ Scenario Outline: Verify user is able to add Certifications details
 	When clicks Save button
 	Then Education details are saved
 
-	Examples:
-	| Certificate or Award | Certified From | Year   | 
-	| ".Net"			   | "Microsoft"    | "2016" |           
-	| "SalesForce Admin"   | "SalesForce"   | "2018" |           
+Examples:
+	| Certificate or Award | Certified From | Year |
+	| DotNet               | Microsoft      | 2016 |
+	| SalesForce Admin     | SalesForce     | 2018 |

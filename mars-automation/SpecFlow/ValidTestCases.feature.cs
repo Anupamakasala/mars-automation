@@ -77,14 +77,14 @@ namespace mars_automation.SpecFlow
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify user is able to update his/her first and last name details")]
+        [NUnit.Framework.DescriptionAttribute("verify user is able to update his/her first and last name details")]
         [NUnit.Framework.CategoryAttribute("Test")]
         public void VerifyUserIsAbleToUpdateHisHerFirstAndLastNameDetails()
         {
             string[] tagsOfScenario = new string[] {
                     "Test"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify user is able to update his/her first and last name details", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("verify user is able to update his/her first and last name details", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 8
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -99,16 +99,16 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("a valid user logs into the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 10
- testRunner.Given("user navigates to the Profile tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("user navigates to the profile tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 11
  testRunner.Given("clicks on their name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 12
- testRunner.When("user updates existing values of First Name and Last Name field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("user updates existing values of first name and last name field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 13
- testRunner.When("clicks Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("clicks save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 14
  testRunner.Then("first and last name details are updated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -120,8 +120,8 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify user is able to update his/her availability details")]
         [NUnit.Framework.CategoryAttribute("Test")]
-        [NUnit.Framework.TestCaseAttribute("\"Part time\"", null)]
-        [NUnit.Framework.TestCaseAttribute("\"Full time\"", null)]
+        [NUnit.Framework.TestCaseAttribute("Part time", null)]
+        [NUnit.Framework.TestCaseAttribute("Full time", null)]
         public void VerifyUserIsAbleToUpdateHisHerAvailabilityDetails(string availabilityType, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -154,7 +154,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("clicks on the pencil icon next to Availability field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 21
- testRunner.When(string.Format("user selects \'{0}\'", availabilityType), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("user selects availability \'{0}\'", availabilityType), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 22
  testRunner.Then("availability field is updated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -166,9 +166,9 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify user is able to update his/her Hours details")]
         [NUnit.Framework.CategoryAttribute("Test")]
-        [NUnit.Framework.TestCaseAttribute("\"Less than 30hours a week\"", null)]
-        [NUnit.Framework.TestCaseAttribute("\"More than 30hours a week\"", null)]
-        [NUnit.Framework.TestCaseAttribute("\"As needed\"", null)]
+        [NUnit.Framework.TestCaseAttribute("Less than 30hours a week", null)]
+        [NUnit.Framework.TestCaseAttribute("More than 30hours a week", null)]
+        [NUnit.Framework.TestCaseAttribute("As needed", null)]
         public void VerifyUserIsAbleToUpdateHisHerHoursDetails(string hoursType, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -213,9 +213,9 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify user is able to update his/her Earn Target details")]
         [NUnit.Framework.CategoryAttribute("Test")]
-        [NUnit.Framework.TestCaseAttribute("\"Less than $500 per month\"", null)]
-        [NUnit.Framework.TestCaseAttribute("\"Between $500 and $1000 per month\"", null)]
-        [NUnit.Framework.TestCaseAttribute("\"More than $1000 per month\"", null)]
+        [NUnit.Framework.TestCaseAttribute("Less than $500 per month", null)]
+        [NUnit.Framework.TestCaseAttribute("Between $500 and $1000 per month", null)]
+        [NUnit.Framework.TestCaseAttribute("More than $1000 per month", null)]
         public void VerifyUserIsAbleToUpdateHisHerEarnTargetDetails(string earnTargetType, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -302,10 +302,10 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify user is able to add Languages details")]
         [NUnit.Framework.CategoryAttribute("Test")]
-        [NUnit.Framework.TestCaseAttribute("\"English\"", "\"Basic\"", null)]
-        [NUnit.Framework.TestCaseAttribute("\"Hindi\"", "\"Conversational\"", null)]
-        [NUnit.Framework.TestCaseAttribute("\"Chinese\"", "\"Fluent\"", null)]
-        [NUnit.Framework.TestCaseAttribute("\"Latin\"", "\"Native/Bilingual\"", null)]
+        [NUnit.Framework.TestCaseAttribute("English", "Basic", null)]
+        [NUnit.Framework.TestCaseAttribute("Hindi", "Conversational", null)]
+        [NUnit.Framework.TestCaseAttribute("Chinese", "Fluent", null)]
+        [NUnit.Framework.TestCaseAttribute("Latin", "Native/Bilingual", null)]
         public void VerifyUserIsAbleToAddLanguagesDetails(string language, string languageLevel, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -354,9 +354,9 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify user is able to add skills details")]
         [NUnit.Framework.CategoryAttribute("Test")]
-        [NUnit.Framework.TestCaseAttribute("\"Functional Testing\"", "\"Beginner\"", null)]
-        [NUnit.Framework.TestCaseAttribute("\"Automation Testing\"", "\"Intermeditae\"", null)]
-        [NUnit.Framework.TestCaseAttribute("\"Selenium\"", "\"Expert\"", null)]
+        [NUnit.Framework.TestCaseAttribute("Functional Testing", "Beginner", null)]
+        [NUnit.Framework.TestCaseAttribute("Automation Testing", "Intermediate", null)]
+        [NUnit.Framework.TestCaseAttribute("Selenium", "Expert", null)]
         public void VerifyUserIsAbleToAddSkillsDetails(string skill, string skillLevel, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -405,8 +405,8 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify user is able to add Education details")]
         [NUnit.Framework.CategoryAttribute("Test")]
-        [NUnit.Framework.TestCaseAttribute("\"Auckland Univeristy\"", "\"New Zealand\"", "\"B.Tech\"", "\"Graduation\"", "\"2011\"", null)]
-        [NUnit.Framework.TestCaseAttribute("\"Victoria Univeristy\"", "\"New Zealand\"", "\"M.Tech\"", "\"Post Graduation\"", "\"2015\"", null)]
+        [NUnit.Framework.TestCaseAttribute("Auckland Univeristy", "New Zealand", "B.Tech", "Graduation", "2011", null)]
+        [NUnit.Framework.TestCaseAttribute("Victoria Univeristy", "New Zealand", "M.Tech", "Post Graduation", "2015", null)]
         public void VerifyUserIsAbleToAddEducationDetails(string collegeUniversityName, string country, string title, string degree, string yearOfGraduation, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -459,8 +459,8 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify user is able to add Certifications details")]
         [NUnit.Framework.CategoryAttribute("Test")]
-        [NUnit.Framework.TestCaseAttribute("\".Net\"", "\"Microsoft\"", "\"2016\"", null)]
-        [NUnit.Framework.TestCaseAttribute("\"SalesForce Admin\"", "\"SalesForce\"", "\"2018\"", null)]
+        [NUnit.Framework.TestCaseAttribute("DotNet", "Microsoft", "2016", null)]
+        [NUnit.Framework.TestCaseAttribute("SalesForce Admin", "SalesForce", "2018", null)]
         public void VerifyUserIsAbleToAddCertificationsDetails(string certificateOrAward, string certifiedFrom, string year, string[] exampleTags)
         {
             string[] @__tags = new string[] {
