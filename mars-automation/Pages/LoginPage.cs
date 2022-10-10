@@ -31,7 +31,7 @@ namespace mars_automation.Pages
 
                 // identify password textbox and enter valid password
                 IWebElement password = driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/div/div[2]/input"));
-                password.SendKeys("Brio@123");
+                password.SendKeys("Brio\"123");
 
                 // identify login button and click
                 IWebElement login = driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/div/div[4]/button"));

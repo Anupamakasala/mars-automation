@@ -41,19 +41,19 @@ namespace mars_automation.StepDefinitions
         [When(@"clicks on the pencil icon next to Availability field")]
         public void WhenClicksOnThePencilIconNextToAvailabilityField()
         {
-            profilePageObj.ClickOnPencilIcon(driver);
+            profilePageObj.ClickOnPencilIconNextToAvailabilityField(driver);
         }
 
         [When(@"clicks on the pencil icon next to Hours field")]
         public void WhenClicksOnThePencilIconNextToHoursField()
         {
-            profilePageObj.ClickOnPencilIcon(driver);
+            profilePageObj.ClickOnPencilIconNextToHoursField(driver);
         }
 
         [When(@"clicks on the pencil icon next to Earn Target field")]
         public void WhenClicksOnThePencilIconNextToEarnTargetField()
         {
-            profilePageObj.ClickOnPencilIcon(driver);
+            profilePageObj.ClickOnPencilIconNextToEarnTargetField(driver);
         }
 
         [When(@"user selects availability '([^']*)'")]
@@ -62,10 +62,37 @@ namespace mars_automation.StepDefinitions
             profilePageObj.SelectAvailabilityType(driver, p0);
         }
 
-        [Then(@"availability field is updated")]
-        public void ThenAvailabilityFieldIsUpdated()
+        [When(@"user selects hours type '([^']*)'")]
+        public void WhenUserSelectsHoursType(string p0)
         {
-            profilePageObj.VerifyAvailabilityType(driver, availabilityType);
+            profilePageObj.SelectHoursType(driver, p0);
+        }
+
+        [When(@"user selects earn target type '([^']*)'")]
+        public void WhenUserSelectsEarnTargetType(string p0)
+        {
+            profilePageObj.SelectEarnTargetType(driver, p0);
+        }
+
+        [Then(@"availability field is updated to '([^']*)'")]
+        public void ThenAvailabilityFieldIsUpdated(string p0)
+        {
+            profilePageObj.VerifyAvailabilityType(driver, p0);
+            driver.Quit();
+        }
+
+
+        [Then(@"hours field is updated to '([^']*)'")]
+        public void ThenHoursFieldIsUpdated(string p0)
+        {
+            profilePageObj.VerifyHoursType(driver, p0);
+            driver.Quit();
+        }
+
+        [Then(@"earn target field is updated to '([^']*)'")]
+        public void ThenEarnTargetFieldIsUpdated(string p0)
+        {
+            profilePageObj.VerifyEarnTargetType(driver, p0);
             driver.Quit();
         }
     }
