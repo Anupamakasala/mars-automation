@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using mars_automation.Utilities;
 using NUnit.Framework;
 using OpenQA.Selenium;
 
@@ -14,6 +15,7 @@ namespace mars_automation.Pages
         {
 
             // navigate to profile page and check if user has logged in Successfully
+            WaitHelpers.WaitToBeClickable(driver, "XPath", "//*[@id='account-profile-section']/div/div[1]/div[2]/div/spana", 2);
             IWebElement hiAnupama = driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/div[1]/div[2]/div/spana"));
 
             Assert.That(hiAnupama.Text == "Hi Anupama", "login failed, Test failed");
