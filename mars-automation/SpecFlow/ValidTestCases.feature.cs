@@ -77,52 +77,11 @@ namespace mars_automation.SpecFlow
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("verify user is able to update his/her first and last name details")]
-        [NUnit.Framework.CategoryAttribute("Test")]
-        public void VerifyUserIsAbleToUpdateHisHerFirstAndLastNameDetails()
-        {
-            string[] tagsOfScenario = new string[] {
-                    "Test"};
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("verify user is able to update his/her first and last name details", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 8
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 9
- testRunner.Given("a valid user logs into the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 10
- testRunner.Given("user navigates to the profile tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 11
- testRunner.Given("clicks on their name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 12
- testRunner.When("user updates existing values of first name and last name field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 13
- testRunner.When("clicks save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 14
- testRunner.Then("first and last name details are updated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify user is able to update his/her availability details")]
         [NUnit.Framework.CategoryAttribute("Test")]
-        [NUnit.Framework.TestCaseAttribute("Part time", null)]
-        [NUnit.Framework.TestCaseAttribute("Full time", null)]
-        public void VerifyUserIsAbleToUpdateHisHerAvailabilityDetails(string availabilityType, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("Part Time", null)]
+        [NUnit.Framework.TestCaseAttribute("Full Time", null)]
+        public void VerifyUserIsAbleToUpdateHisHerAvailabilityDetails(string availability_Type, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "Test"};
@@ -132,7 +91,7 @@ this.ScenarioInitialize(scenarioInfo);
             }
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("availability type", availabilityType);
+            argumentsOfScenario.Add("availability_type", availability_Type);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify user is able to update his/her availability details", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 17
 this.ScenarioInitialize(scenarioInfo);
@@ -154,10 +113,10 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("clicks on the pencil icon next to Availability field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 21
- testRunner.When(string.Format("user selects availability \'{0}\'", availabilityType), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("user selects availability \'{0}\'", availability_Type), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 22
- testRunner.Then("availability field is updated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("availability field is updated to \'{0}\'", availability_Type), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -169,7 +128,7 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestCaseAttribute("Less than 30hours a week", null)]
         [NUnit.Framework.TestCaseAttribute("More than 30hours a week", null)]
         [NUnit.Framework.TestCaseAttribute("As needed", null)]
-        public void VerifyUserIsAbleToUpdateHisHerHoursDetails(string hoursType, string[] exampleTags)
+        public void VerifyUserIsAbleToUpdateHisHerHoursDetails(string hours_Type, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "Test"};
@@ -179,7 +138,7 @@ this.ScenarioInitialize(scenarioInfo);
             }
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("hours type", hoursType);
+            argumentsOfScenario.Add("hours_type", hours_Type);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify user is able to update his/her Hours details", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 30
 this.ScenarioInitialize(scenarioInfo);
@@ -201,10 +160,10 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("clicks on the pencil icon next to Hours field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 34
- testRunner.When(string.Format("user selects \'{0}\'", hoursType), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("user selects hours type \'{0}\'", hours_Type), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 35
- testRunner.Then("Hours field is updated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("hours field is updated to \'{0}\'", hours_Type), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -216,7 +175,7 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestCaseAttribute("Less than $500 per month", null)]
         [NUnit.Framework.TestCaseAttribute("Between $500 and $1000 per month", null)]
         [NUnit.Framework.TestCaseAttribute("More than $1000 per month", null)]
-        public void VerifyUserIsAbleToUpdateHisHerEarnTargetDetails(string earnTargetType, string[] exampleTags)
+        public void VerifyUserIsAbleToUpdateHisHerEarnTargetDetails(string earn_Target_Type, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "Test"};
@@ -226,7 +185,7 @@ this.ScenarioInitialize(scenarioInfo);
             }
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("earn target type", earnTargetType);
+            argumentsOfScenario.Add("earn_target_type", earn_Target_Type);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify user is able to update his/her Earn Target details", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 44
 this.ScenarioInitialize(scenarioInfo);
@@ -248,260 +207,10 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("clicks on the pencil icon next to Earn Target field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 48
- testRunner.When(string.Format("user selects \'{0}\'", earnTargetType), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("user selects earn target type \'{0}\'", earn_Target_Type), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 49
- testRunner.Then("Earn Target field is updated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify user is able to add/update his/her Description details")]
-        [NUnit.Framework.CategoryAttribute("Test")]
-        public void VerifyUserIsAbleToAddUpdateHisHerDescriptionDetails()
-        {
-            string[] tagsOfScenario = new string[] {
-                    "Test"};
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify user is able to add/update his/her Description details", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 58
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 59
- testRunner.Given("a valid user logs into the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 60
- testRunner.Given("user navigates to the Profile tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 61
- testRunner.Given("clicks on their Description", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 62
- testRunner.When("user adds/updates value in the Description field less than or equal to 600 charac" +
-                        "ters", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 63
- testRunner.When("clicks Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 64
- testRunner.Then("Description details are saved/updated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify user is able to add Languages details")]
-        [NUnit.Framework.CategoryAttribute("Test")]
-        [NUnit.Framework.TestCaseAttribute("English", "Basic", null)]
-        [NUnit.Framework.TestCaseAttribute("Hindi", "Conversational", null)]
-        [NUnit.Framework.TestCaseAttribute("Chinese", "Fluent", null)]
-        [NUnit.Framework.TestCaseAttribute("Latin", "Native/Bilingual", null)]
-        public void VerifyUserIsAbleToAddLanguagesDetails(string language, string languageLevel, string[] exampleTags)
-        {
-            string[] @__tags = new string[] {
-                    "Test"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            string[] tagsOfScenario = @__tags;
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("language", language);
-            argumentsOfScenario.Add("language level", languageLevel);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify user is able to add Languages details", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 67
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 68
- testRunner.Given("a valid user logs into the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 69
- testRunner.Given("user navigates to the Profile tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 70
- testRunner.Given("clicks on Add New button under Languages tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 71
- testRunner.When(string.Format("user selects adds a \'{0}\' and selects a \'{1}\'", language, languageLevel), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 72
- testRunner.When("clicks Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 73
- testRunner.Then("Language details are saved", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify user is able to add skills details")]
-        [NUnit.Framework.CategoryAttribute("Test")]
-        [NUnit.Framework.TestCaseAttribute("Functional Testing", "Beginner", null)]
-        [NUnit.Framework.TestCaseAttribute("Automation Testing", "Intermediate", null)]
-        [NUnit.Framework.TestCaseAttribute("Selenium", "Expert", null)]
-        public void VerifyUserIsAbleToAddSkillsDetails(string skill, string skillLevel, string[] exampleTags)
-        {
-            string[] @__tags = new string[] {
-                    "Test"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            string[] tagsOfScenario = @__tags;
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("skill", skill);
-            argumentsOfScenario.Add("skill level", skillLevel);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify user is able to add skills details", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 84
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 85
- testRunner.Given("a valid user logs into the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 86
- testRunner.Given("user navigates to the Profile tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 87
- testRunner.Given("clicks on Add New button under Skills tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 88
- testRunner.When(string.Format("user selects adds a \'{0}\' and selects a \'{1}\'", skill, skillLevel), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 89
- testRunner.When("clicks Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 90
- testRunner.Then("Language details are saved", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify user is able to add Education details")]
-        [NUnit.Framework.CategoryAttribute("Test")]
-        [NUnit.Framework.TestCaseAttribute("Auckland Univeristy", "New Zealand", "B.Tech", "Graduation", "2011", null)]
-        [NUnit.Framework.TestCaseAttribute("Victoria Univeristy", "New Zealand", "M.Tech", "Post Graduation", "2015", null)]
-        public void VerifyUserIsAbleToAddEducationDetails(string collegeUniversityName, string country, string title, string degree, string yearOfGraduation, string[] exampleTags)
-        {
-            string[] @__tags = new string[] {
-                    "Test"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            string[] tagsOfScenario = @__tags;
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("College/University Name", collegeUniversityName);
-            argumentsOfScenario.Add("Country", country);
-            argumentsOfScenario.Add("Title", title);
-            argumentsOfScenario.Add("Degree", degree);
-            argumentsOfScenario.Add("Year of graduation", yearOfGraduation);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify user is able to add Education details", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 99
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 100
- testRunner.Given("a valid user logs into the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 101
- testRunner.Given("user navigates to the Profile tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 102
- testRunner.Given("clicks on Add New button under Education tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 103
- testRunner.When(string.Format("user selects adds a \'{0}\', selects a \'{1}\', selects a \'{2}\', adds a \'{3}\' and sel" +
-                            "ects a \'{4}\'", collegeUniversityName, country, title, degree, yearOfGraduation), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 104
- testRunner.When("clicks Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 105
- testRunner.Then("Education details are saved", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify user is able to add Certifications details")]
-        [NUnit.Framework.CategoryAttribute("Test")]
-        [NUnit.Framework.TestCaseAttribute("DotNet", "Microsoft", "2016", null)]
-        [NUnit.Framework.TestCaseAttribute("SalesForce Admin", "SalesForce", "2018", null)]
-        public void VerifyUserIsAbleToAddCertificationsDetails(string certificateOrAward, string certifiedFrom, string year, string[] exampleTags)
-        {
-            string[] @__tags = new string[] {
-                    "Test"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            string[] tagsOfScenario = @__tags;
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("Certificate or Award", certificateOrAward);
-            argumentsOfScenario.Add("Certified From", certifiedFrom);
-            argumentsOfScenario.Add("Year", year);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify user is able to add Certifications details", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 113
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 114
- testRunner.Given("a valid user logs into the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 115
- testRunner.Given("user navigates to the Profile tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 116
- testRunner.Given("clicks on Add New button under Certifications tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 117
- testRunner.When(string.Format("user selects adds a \'{0}\', selects a \'{1}\', and selects a \'{2}\'", certificateOrAward, certifiedFrom, year), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 118
- testRunner.When("clicks Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 119
- testRunner.Then("Education details are saved", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("earn target field is updated to \'{0}\'", earn_Target_Type), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
