@@ -174,5 +174,22 @@ namespace mars_automation.Pages
             Assert.That(getEarnTargetType == earnTarget);
 
         }
+
+        public void ClickOnShareSkillButton(IWebDriver driver)
+        {
+
+            // click on the pencil icon
+            IWebElement shareSkillButton = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[1]/div/div[2]/a"));
+            shareSkillButton.Click();
+
+        }
+        public void ClickOnManageListingsTab(IWebDriver driver)
+        {
+
+            // click on Manage Listings tab
+            IWebElement manageListingsTab = driver.FindElement(By.XPath("//*[@id=\"notification-section\"]/section[1]/div/a[3]"));
+            manageListingsTab.Click();
+
+        }
     }
 }
