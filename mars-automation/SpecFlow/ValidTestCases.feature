@@ -122,3 +122,41 @@ Scenario Outline: Verify user is able to add Certifications details
 	| Certificate or Award | Certified From | Year   | 
 	| ".Net"			   | "Microsoft"    | "2016" |           
 	| "SalesForce Admin"   | "SalesForce"   | "2018" |           
+
+# Automated
+@Test
+Scenario Outline: Verify user is able to add a skill via share skill page
+	Given a valid user logs into the application
+	Given user clicks on Share Skill button
+	Given user populates '<Title>', '<Description>', '<Category>', '<Sub Category>', '<Tags>', '<Service Type>', '<Location Type>', '<Start Date>', '<End Date>', '<Skill Trade>', '<Skill-Exchange>', '<Credit>', '<Active>' fields
+	When user clicks on save button
+	Then Listing details are saved
+
+	Examples:
+	| Title               | Description          | Category             | Sub Category | Tags                 | Service Type           | Location Type | Start Date   | End Date     | Skill Trade      | Skill-Exchange | Credit | Active   |
+	| "Automation Testing | "Sample Description" | "Programming & Tech" | "QA"         | "Selenium"           | "Hourly basis service" | "On-site"     | "01/06/2023" | "01/12/2023" | "Skill-exchange" | "Testing"      | ""     | "Active" |
+	| "Manual Testing"    | "Sample Description" | "Programming & Tech" | "QA"         | "Functional Testing" | "One-off service"      | "Online"      | "01/06/2023" | "01/12/2023" | "Credit"         | ""             | "100"  | "Hidden" |
+
+# Automated
+@Test
+Scenario Outline: Verify user is able to view a listing
+	Given a valid user logs into the application
+	Given user clicks on Manage Listing tab
+	When user clicks on view listing icon
+	Then listing details are loaded correctly
+
+	Examples:
+	| Title            |
+	| "Manual Testing" |
+
+# Automated
+@Test
+Scenario Outline: Verify user is able to delete a listing
+	Given a valid user logs into the application
+	Given user clicks on Manage Listing tab
+	When user clicks on delete listing icon
+	Then listing details are deleted
+
+	Examples:
+	| Title            |
+	| "Manual Testing" |
